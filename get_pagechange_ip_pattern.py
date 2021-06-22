@@ -6,7 +6,7 @@ def compile_prefetcher(branch_predicor, l1i_prefetcher, l1d_prefetcher, l2c_pref
 def get_ip_pattern(trace, prefetcher, n_warm, n_sim, relod_valuable_path):
     os.system("./run_champsim.sh {} {} {} {}".format(prefetcher, n_warm, n_sim, trace))
     print(trace + "执行完毕，开始复制")
-    os.system("cp ./pagechange_ip_pattern.txt pagechange_ip_pattern/")
+    os.system("cp ./pagechange_ip_pattern.txt pagechange_ip_pattern/{}", relod_valuable_path)
     print("复制完毕")
 
 if __name__ == '__main__':
